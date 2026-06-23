@@ -1,0 +1,118 @@
+/* ============================================
+   Tech Color Tokens — Юлия Груздева
+   Холодная, «инженерная» гамма
+   ============================================ */
+
+:root {
+  /* ========== FONTS ========== */
+  --font-sans: Inter, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* ========== FONT SIZES ========== */
+  --font-size-12: 12px;
+  --font-size-14: 14px;
+  --font-size-16: 16px;
+  --font-size-20: 20px;
+  --font-size-22: 22px;
+  --font-size-28: 28px;
+  --font-size-36: 36px;
+  --font-size-40: 40px;
+  --font-size-48: 48px;
+
+  /* ========== LINE HEIGHTS ========== */
+  --line-height-16: 16px;
+  --line-height-20: 20px;
+  --line-height-24: 24px;
+  --line-height-28: 28px;
+  --line-height-30: 30px;
+  --line-height-32: 32px;
+  --line-height-36: 36px;
+  --line-height-40: 40px;
+  --line-height-44: 44px;
+  --line-height-48: 48px;
+  --line-height-56: 56px;
+  --line-height-60: 60px;
+
+  /* ========== FONT WEIGHTS ========== */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-strong: 650;
+  --font-weight-bold: 700;
+
+  /* ========== AG FONTS ========== */
+  --ag-font-sans: var(--font-sans);
+  --ag-font-mono: var(--font-mono);
+
+  /* ==========================================
+     🎨 НОВАЯ ПАЛИТРА — ХОЛОДНЫЙ ТЕХНИЧЕСКИЙ
+     ========================================== */
+
+  /* --- ТЕКСТ (высокий контраст) --- */
+  --ag-color-text-primary: #0B0C10;
+  --ag-color-text-secondary: #1F2233;
+  --ag-color-text-tertiary: #4A4F66;
+
+  /* --- ФОН (холодный, стерильный) --- */
+  --ag-color-background-primary: #F8F9FC;
+  --ag-color-background-secondary: #F0F2F8;
+  --ag-color-background-tertiary: #E6EAF2;
+
+  /* --- ГРАНИЦЫ --- */
+  --ag-color-border: #D0D5E0;
+
+  /* --- ОСНОВНОЙ АКЦЕНТ (Синий — как в GitHub/Linear) --- */
+  --ag-color-accent-primary: #1A5CFF;
+  --ag-color-accent-light: #E0EBFF;
+  --ag-color-accent-surface: #EEF4FF;
+
+  /* --- ВТОРИЧНЫЙ АКЦЕНТ (Серо-голубой) --- */
+  --ag-color-accent-secondary: #4A6FA5;
+
+  /* --- ТЕХНИЧЕСКИЙ АКЦЕНТ (Цвет терминала) --- */
+  --ag-color-technical: #00A67E;
+
+  /* --- НЕЙТРАЛЬНЫЕ --- */
+  --ag-color-neutral-surface: var(--ag-color-background-primary);
+  --ag-color-neutral-primary: var(--ag-color-text-primary);
+  --ag-color-neutral-muted-surface: var(--ag-color-background-tertiary);
+
+  /* --- СТАТУСЫ --- */
+  --ag-color-status-error-light: #FDEDEE;
+  --ag-color-status-error: #D92D4B;
+  --ag-color-status-warning-light: #FFF5E6;
+  --ag-color-status-warning: #C77D1E;
+  --ag-color-status-success-light: #E6F6ED;
+  --ag-color-status-success: #168A4A;
+  --ag-color-status-order-light: #E0EBFF;
+  --ag-color-status-order: #1A5CFF;
+
+  /* ==========================================
+     🆕 НОВЫЙ ТОКЕН — ДЛЯ КРУПНЫХ ЦИФР (МЕТРИК)
+     ========================================== */
+  --ag-color-metric: #1A2236;  /* Глубокий графитовый с холодным отливом */
+
+  /* ==========================================
+     🌀 ПРОСТРАНСТВО
+     ========================================== */
+  --ag-space-0: 0;
+  --ag-space-2: 2px;
+  --ag-space-4: 4px;
+  --ag-space-8: 8px;
+  --ag-space-12: 12px;
+  --ag-space-16: 16px;
+  --ag-space-20: 20px;
+  --ag-space-24: 24px;
+  --ag-space-32: 32px;
+  --ag-space-40: 40px;
+  --ag-space-48: 48px;
+  --ag-space-56: 56px;
+  --ag-space-64: 64px;
+  --ag-space-80: 80px;
+
+  /* ==========================================
+     🧊 РАДИУСЫ
+     ========================================== */
+  --ag-radius-8: 8px;
+  --ag-radius-16: 16px;
+}

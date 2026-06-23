@@ -1,0 +1,226 @@
+<!--
+CANONICAL CASE TEMPLATE v1
+
+This file defines the standard structure for all portfolio case studies:
+- layout
+- typography rhythm
+- navigation pattern
+- section hierarchy
+- interaction rules
+
+All future cases must follow this structure.
+-->
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AoS — Юлия Груздева</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="desktop content-container">
+      <a class="project-card__link body-strong case-back-link" href="index.html">← Назад</a>
+      <article class="case section section--narrow" id="aos">
+        <header class="case-hero">
+          <div class="case-brand">
+            <img class="case-brand__logo" src="assets/logo/mts_logo.svg" alt="" />
+            <span class="caption">МТС · AoS</span>
+          </div>
+          <h1 class="h2">AoS: Между требованиями и интерфейсом</h1>
+          <p class="body">Сложная корпоративная система, где интерфейс постоянно находится между требованиями, архитектурными ограничениями и реальной логикой работы пользователей.</p>
+          <div class="case-meta case-meta--grid">
+            <div class="case-meta__item">
+              <p class="caption case-meta__label">Продукт</p>
+              <p class="body case-meta__value">Automation of Sales (AoS)</p>
+            </div>
+            <div class="case-meta__item">
+              <p class="caption case-meta__label">Роль</p>
+              <p class="body case-meta__value">Senior Product Designer</p>
+            </div>
+            <div class="case-meta__item">
+              <p class="caption case-meta__label">Период</p>
+              <p class="body case-meta__value">2024 — настоящее время</p>
+            </div>
+            <div class="case-meta__item">
+              <p class="caption case-meta__label">Фокус</p>
+              <p class="body case-meta__value">Сложные B2B-сценарии, дизайн-процессы, исследования пользователей, систематизация интерфейсов</p>
+            </div>
+          </div>
+        </header>
+
+        <nav class="page-nav" aria-label="Навигация по кейсу">
+          <a class="page-nav__link ag-small-code" href="#context">КОНТЕКСТ</a>
+          <a class="page-nav__link ag-small-code" href="#process">ПРОЦЕСС</a>
+          <a class="page-nav__link ag-small-code" href="#research">ИССЛЕДОВАНИЯ</a>
+          <a class="page-nav__link ag-small-code" href="#examples">ПРИМЕРЫ</a>
+          <a class="page-nav__link ag-small-code" href="#result">РЕЗУЛЬТАТ</a>
+        </nav>
+
+        <section class="case-block" id="context">
+          <h2 class="h3">Контекст</h2>
+          <p class="body">Когда я пришла в проект, дизайнер подключался уже после появления требований.</p>
+          <p class="body">Процесс выглядел примерно так:</p>
+          <p class="body-strong">Требования → Дизайн → Разработка → Обучение пользователей</p>
+          <p class="body">На практике это означало, что многие проблемы обнаруживались слишком поздно. Уже после проектирования становилось понятно, что в требованиях есть противоречия, не учтены важные сценарии или отсутствуют детали, без которых решение не работает так, как ожидалось.</p>
+          <p class="body">При этом исследования пользователей практически не проводились, а обратная связь чаще собиралась уже после реализации функциональности. Пользователей подключали в основном на этапе обучения, когда изменить что-то было дорого и сложно.</p>
+        </section>
+
+        <section class="case-block">
+          <h2 class="h3">С чего пришлось начать</h2>
+          <p class="body">Довольно быстро стало понятно, что проблема не в отдельных экранах. Чтобы вообще начать системно развивать продукт, сначала пришлось создать базу для работы с интерфейсами, так как никакого UI-кита не существовало. Мне пришлось собирать практически с нуля, причём от обратного: через анализ уже реализованных компонентов, экранов и ограничений low-code платформы.</p>
+          <p class="body">Постепенно набор разрозненных интерфейсов начал превращаться в систему. Появились повторно используемые компоненты, единые паттерны и возможность проектировать не отдельные экраны, а пользовательские сценарии целиком.</p>
+          <p class="body">Но довольно быстро стало понятно, что одного UI-кита и запуска дизайн-процесса недостаточно. Основная проблема находилась раньше — на этапе формирования решений.</p>
+        </section>
+
+        <section class="case-block" id="research">
+          <h2 class="h3">Исследования как инструмент проверки решений</h2>
+          <p class="body">Одним из первых изменений стало регулярное общение с пользователями. За последние несколько месяцев у нас было больше тридцати интервью и тестирований. И почти всегда самые полезные из них заканчиваются одинаково. Я закрываю ноутбук и иду выдыхать в парк, потоу что стало очевидно - начинаем сначала.</p>
+          <blockquote class="quote">
+           Ещё час назад решение выглядело логичным и собранным, а потом в разговоре с пользователем выясняется, что он живёт вообще в другой логике.
+            Он делает по-другому. Быстрее. Проще. Иногда вообще в обход того, что мы считали основным сценарием.
+          </blockquote>
+          <p class="body">Многие решения, которые внутри команды выглядели очевидными, после интервью приходилось пересматривать. Иногда менялся экран, иногда сценарий целиком, а иногда становилось понятно, что проблема вообще не в интерфейсе.</p>
+          <p class="body">Исследования постепенно перестали быть разовой активностью и стали частью процесса принятия решений.</p>
+        </section>
+
+        <section class="case-block" id="process">
+          <h2 class="h3">Как изменился процесс работы</h2>
+          <p class="body">Со временем мне удалось пересмотреть сам подход к работе над задачами. Сейчас к тем задачам, где требуется проектирование интерфейсов, я подключаюсь уже на этапе формирования требований. Это позволяет раньше находить узкие места, задавать вопросы, которые могут не возникнуть у аналитиков или методологов, и вовремя предлагать несколько вариантов решения.</p>
+          <p class="body">Процесс постепенно изменился:</p>
+          <div class="process-change">
+            <div class="process-change__item">
+              <p class="caption process-change__label">Было</p>
+              <p class="body-strong process-change__flow">Требования → Дизайн → Разработка → Обучение пользователей</p>
+            </div>
+            <div class="process-change__item">
+              <p class="caption process-change__label">Стало</p>
+              <p class="body-strong process-change__flow">Требования → Дизайн-проверка гипотез → Разработка</p>
+            </div>
+          </div>
+          <p class="body">Это сократило количество возвратов к требованиям, уменьшило объём переделок и позволило проверять спорные решения до того, как на них будут потрачены ресурсы разработки.</p>
+          <p class="body">По сути дизайн перестал быть этапом визуализации и стал инструментом проверки решений.</p>
+          <blockquote class="quote">Дизайн редко начинается после требований — он начинается прямо внутри них.</blockquote>
+        </section>
+
+        <section class="case-block" id="examples">
+          <h2 class="h3">Пример 1. Параметры продуктов</h2>
+          <p class="body">Для каждого продукта связи существует набор параметров, влияющих на подключение и дальнейшее исполнение заказа. С точки зрения архитектуры было логично строить единую модель параметров для всех продуктов. Это упрощало поддержку и делало систему более предсказуемой. Но во время обсуждений и тестирования стало понятно, что универсальность системы не всегда помогает пользователю. Часть настроек выглядела важной для системы, но не помогала человеку выполнить задачу.</p>
+          <p class="body">В результате пришлось разделять системную и пользовательскую логику и искать баланс между архитектурной целостностью и удобством работы.</p>
+          <figure class="case-figure case-figure--scheme status-figure">
+            <div class="image-wrapper">
+              <img
+                class="architecture-image"
+                src="assets/aos/product-parameters-flow.png"
+                alt=""
+              />
+            </div>
+            <figcaption class="caption">Схема пользовательского пути и параметров продукта</figcaption>
+          </figure>
+        </section>
+
+        <section class="case-block">
+          <h2 class="h3">Пример 2. Статусная модель корзины</h2>
+          <p class="body">Одной из самых сложных задач стала работа со статусами.</p>
+          <p class="body">В системе одновременно существовали статусы корзины и статусы отдельных продуктов внутри неё. С точки зрения архитектуры такая модель была корректной. Но для пользователя она выглядела перегруженной и не отвечала на главный вопрос:</p>
+          <blockquote class="quote">
+            Что происходит сейчас и нужно ли мне что-то делать?
+          </blockquote>
+
+          <p class="body">Во время обсуждений с командой и проверки сценариев стало понятно, что пользователю не нужно видеть всю техническую сложность процесса. Он воспринимает заказ целиком и хочет понимать только то, что влияет на его дальнейшие действия. В результате статусная модель была пересмотрена. Техническая логика системы сохранилась, но в интерфейсе остались только состояния, которые помогают человеку принять решение и понять следующий шаг.</p>
+
+<div class="status-model status-block">
+            <p class="caption status-model__title status-title">Было</p>
+            <figure class="case-figure case-figure--scheme status-figure">
+              <div class="image-wrapper">
+                <div class="status-box">
+                <p class="caption status-label">КОРЗИНА</p>
+                <div class="status-line">
+                  <span class="badge ag-small-code badge--draft">Черновик</span>
+                  <span class="status-arrow">→</span>
+                  <span class="badge ag-small-code badge--not-ready">Не готова к исполнению заказа</span>
+                  <span class="status-arrow">→</span>
+                  <span class="badge ag-small-code badge--done">Готова к исполнению заказа</span>
+                  <span class="status-arrow">→</span>
+                  <span class="badge ag-small-code badge--order">Передана в заказ</span>
+                  <span class="status-arrow">→</span>
+                  <span class="badge ag-small-code badge--archive">Архив</span>
+                </div>
+                
+                <div class="status-separator"></div>
+                <p class="caption status-label">ПРОДУКТ</p>
+                <div class="status-line">
+                  <span class="badge ag-small-code badge--draft">Черновик</span>
+                  <span class="status-arrow">→</span>
+                  <span class="badge ag-small-code badge--not-ready">Не готов</span>
+                  <span class="status-arrow">→</span>
+                  <span class="badge ag-small-code badge--done">Готов</span>
+                  <span class="status-arrow">→</span>
+                  <span class="badge ag-small-code badge--order">Передан в заказ</span>
+                  <span class="status-arrow">→</span>
+                  <span class="badge ag-small-code badge--archive">Архив</span>
+                </div>
+                </div>
+              </div>
+              <figcaption class="caption">Техническая статусная модель</figcaption>
+            </figure>
+          </div>
+
+          <div class="status-model status-block">
+            <p class="caption status-model__title status-title">Стало</p>
+            <figure class="case-figure case-figure--scheme status-figure">
+              <div class="image-wrapper">
+                <div class="status-box status-box--compact">
+                <p class="caption status-label">КОРЗИНА</p>
+                <div class="status-line">
+                  <span class="badge ag-small-code badge--not-ready">Не готово</span>
+                  <span class="status-arrow">→</span>
+                  <span class="badge ag-small-code badge--done">Готово</span>
+                  <span class="status-arrow">→</span>
+                  <span class="badge ag-small-code badge--order">Передано в заказ</span>
+                </div>
+                <div class="status-separator"></div>
+                <p class="caption status-label">ПРОДУКТЫ</p>
+                <div class="status-line">
+                  <span class="badge ag-small-code badge--draft">Черновик</span>
+                  <span class="status-arrow">→</span>
+                  <span class="badge ag-small-code badge--not-ready">Не готов</span>
+                  <span class="status-arrow">→</span>
+                  <span class="badge ag-small-code badge--done">Готов</span>
+                </div>
+                </div>
+              </div>
+              <figcaption class="caption">Пользовательская статусная модель</figcaption>
+            </figure>
+          </div>
+          <figure class="case-figure case-figure--shadow">
+            <div class="image-wrapper image-stack">
+              <img src="assets/aos/status-interface-1.png" alt="" />
+              <img src="assets/aos/status-interface-2.png" alt="" />
+              <img src="assets/aos/status-interface-3.png" alt="" />
+            </div>
+            <figcaption class="caption">Как это выглядит в интерфейсе ELMA</figcaption>
+          </figure>
+        </section>
+
+        <section class="case-block" id="result">
+          <h2 class="h3">Результат</h2>
+          <div class="result-list">
+            <p class="body result-list__intro">За время работы мне удалось внедрить в процесс:</p>
+            <ul class="body result-list__items">
+              <li>регулярные пользовательские интервью;</li>
+              <li>тестирование гипотез до разработки;</li>
+              <li>системный подход к интерфейсам;</li>
+              <li>единые паттерны проектирования;</li>
+              <li>обсуждение решений через реальные пользовательские сценарии;</li>
+              <li>раннюю проверку требований до передачи в разработку.</li>
+            </ul>
+          </div>
+          <p class="body">Это позволило раньше находить проблемы в требованиях, сокращать количество переделок и не тратить ресурсы разработки на заведомо слабые решения.</p>
+          <p class="body">Главным результатом для меня стали не отдельные экраны и не статусная модель, а то, что дизайн стал частью процесса принятия продуктовых решений.</p>
+        </section>
+      </article>
+    </main>
+    <script src="./scroll.js" defer></script>
+  </body>
+</html>
