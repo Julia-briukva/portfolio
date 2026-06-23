@@ -648,6 +648,21 @@ figure {
   object-fit: contain;
 }
 
+.award-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-16);
+  align-items: center;
+  width: 100%;
+}
+
+.award-logos img {
+  display: block;
+  width: 72px;
+  max-width: 100%;
+  height: auto;
+}
+
 .case-meta {
   display: flex;
   flex-direction: column;

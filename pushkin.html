@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Пушкин ⟨цифровой⟩ — Юлия Груздева</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=110092596', 'ym');
+
+        ym(110092596, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/110092596" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+  </head>
+  <body>
+    <main class="desktop content-container">
+      <a class="project-card__link body-strong case-back-link" href="index.html">← Назад</a>
+      <article class="case section section--narrow" id="pushkin">
+        <header class="case-hero">
+          <div class="case-brand">
+            <img class="case-brand__logo" src="assets/logo/itmo-logo.png" alt="Университет ИТМО" />
+            <span class="caption">Университет ИТМО</span>
+          </div>
+          <h1 class="h2">Пушкин ⟨цифровой⟩: как спроектировать архив, понятный не только исследователям</h1>
+          <p class="body">Научно-просветительский портал для работы с рукописями, прижизненными изданиями, комментариями и связанными материалами о Пушкине.</p>
+          <div class="case-meta case-meta--grid">
+            <div class="case-meta__item">
+              <p class="caption case-meta__label">Продукт</p>
+              <p class="body case-meta__value">Пушкин ⟨цифровой⟩</p>
+            </div>
+            <div class="case-meta__item">
+              <p class="caption case-meta__label">Роль</p>
+              <p class="body case-meta__value">UX Designer</p>
+            </div>
+            <div class="case-meta__item">
+              <p class="caption case-meta__label">Период</p>
+              <p class="body case-meta__value">2023 — 2024</p>
+            </div>
+            <div class="case-meta__item">
+              <p class="caption case-meta__label">Фокус</p>
+              <p class="body case-meta__value">Информационная архитектура, связанные данные, экспертные пользователи</p>
+            </div>
+          </div>
+        </header>
+
+        <nav class="page-nav" aria-label="Навигация по кейсу">
+          <a class="page-nav__link ag-small-code" href="#context">КОНТЕКСТ</a>
+          <a class="page-nav__link ag-small-code" href="#task">ЗАДАЧА</a>
+          <a class="page-nav__link ag-small-code" href="#role">РОЛЬ</a>
+          <a class="page-nav__link ag-small-code" href="#architecture">АРХИТЕКТУРА</a>
+          <a class="page-nav__link ag-small-code" href="#work-context">КОНТЕКСТ ПРОИЗВЕДЕНИЯ</a>
+          <a class="page-nav__link ag-small-code" href="#experts">РАБОТА С ЭКСПЕРТАМИ</a>
+          <a class="page-nav__link ag-small-code" href="#result">РЕЗУЛЬТАТ</a>
+        </nav>
+
+        <section class="case-block" id="context">
+          <h2 class="h3">Контекст</h2>
+          <p class="body">Пушкин ⟨цифровой⟩ — проект по оцифровке и публикации материалов Пушкинского Дома.</p>
+          <p class="body">Портал должен был открыть доступ к рукописям, прижизненным изданиям, редакциям произведений, научным комментариям, библиографии и справочным материалам о Пушкине.</p>
+          <p class="body">До этого большая часть материалов была доступна только узкому кругу специалистов. Чтобы работать с архивами, нужно было приезжать в Петербург и проходить отдельные процедуры доступа к редким материалам.</p>
+          <figure class="case-figure">
+            <div class="image-wrapper">
+              <img src="assets/pushkin/pushkin-work-page.png" alt="Страница произведения на портале Пушкин цифровой" />
+            </div>
+            <figcaption class="caption">UX-макет</figcaption>
+          </figure>
+          <figure class="case-figure">
+            <div class="image-wrapper">
+              <img src="assets/pushkin/pushkin-work-page-implemented.png" alt="Реализованная страница произведения на портале Пушкин цифровой" />
+            </div>
+            <figcaption class="caption">Реализованная версия</figcaption>
+          </figure>
+        </section>
+
+        <section class="case-block" id="task">
+          <h2 class="h3">Задача</h2>
+          <p class="body">Нужно было спроектировать научно-просветительский портал, который одновременно сохраняет академическую точность и остаётся понятным для людей с разным уровнем подготовки.</p>
+          <p class="body">Основные пользовательские группы:</p>
+          <ul class="body">
+            <li>исследователь;</li>
+            <li>преподаватель;</li>
+            <li>студент;</li>
+            <li>школьник.</li>
+          </ul>
+          <p class="body">Для одних портал должен был стать инструментом профессиональной работы с источниками, для других — понятной точкой входа в материалы о Пушкине.</p>
+        </section>
+
+        <section class="case-block" id="role">
+          <h2 class="h3">Моя роль</h2>
+          <p class="body">Я отвечала за UX-направление проекта: карту сайта, пользовательские сценарии, wireframes, финальные UX-макеты и мобильную версию интерфейсов.</p>
+          <p class="body">Также я участвовала во взаимодействии с ИТМО, разработчиками и академическим сообществом: помогала переводить сложные обсуждения о структуре материалов в конкретные интерфейсные решения.</p>
+        </section>
+
+        <section class="case-block" id="architecture">
+          <h2 class="h3">Информационная архитектура</h2>
+          <p class="body">Главная сложность была не в том, чтобы показать текст произведения. Нужно было показать произведение как систему связанных данных.</p>
+          <p class="body">Вокруг одного произведения могли существовать рукописи, редакции, прижизненные издания, научные комментарии, библиография, корреляты и просветительские материалы.</p>
+          <p class="body">Мы проектировали архитектуру так, чтобы человек сначала видел понятный вход — текст произведения или каталог, — а затем мог постепенно уходить глубже в академический контекст.</p>
+          <figure class="case-figure">
+            <div class="image-wrapper">
+              <img src="assets/pushkin/pushkin-rubricator.webp" alt="Рубрикатор произведений на портале Пушкин цифровой" />
+            </div>
+            <figcaption class="caption">UX-макет</figcaption>
+          </figure>
+          <figure class="case-figure">
+            <div class="image-wrapper">
+              <img src="assets/pushkin/pushkin-rubricator-implemented.webp" alt="Реализованный рубрикатор произведений на портале Пушкин цифровой" />
+            </div>
+            <figcaption class="caption">Реализованная версия</figcaption>
+          </figure>
+          <figure class="case-figure">
+            <div class="image-wrapper">
+              <img src="assets/pushkin/pushkin-search.webp" alt="Поисковая выдача по материалам портала Пушкин цифровой" />
+            </div>
+            <figcaption class="caption">Поисковая выдача по связанным материалам</figcaption>
+          </figure>
+        </section>
+
+        <section class="case-block" id="work-context">
+          <h2 class="h3">Контекст произведения</h2>
+          <p class="body">Для академиков произведение Пушкина не существует отдельно от контекста. Оно связано с биографией автора, историческими событиями, рукописями, редакциями, комментариями и другими материалами.</p>
+          <p class="body">Поэтому страница произведения была спроектирована не как простая страница текста, а как точка входа в связанные материалы.</p>
+          <p class="body">Пользователь мог начать с привычного текста, а затем раскрыть контекст: рукописи, редакции, первые издания, комментарии, библиографию и другие материалы вокруг произведения.</p>
+          <figure class="case-figure">
+            <div class="image-wrapper">
+              <img src="assets/pushkin/pushkin-manuscript.webp" alt="Рукопись в PDF-вьюере портала Пушкин цифровой" />
+            </div>
+            <figcaption class="caption">UX-макет</figcaption>
+          </figure>
+          <figure class="case-figure">
+            <div class="image-wrapper">
+              <img src="assets/pushkin/pushkin-manuscript-implemented.webp" alt="Реализованный интерфейс просмотра рукописи на портале Пушкин цифровой" />
+            </div>
+            <figcaption class="caption">Реализованная версия</figcaption>
+          </figure>
+          <figure class="case-figure">
+            <div class="image-wrapper">
+              <img src="assets/pushkin/pushkin-comments.png" alt="Научные комментарии к произведению на портале Пушкин цифровой" />
+            </div>
+            <figcaption class="caption">UX-макет</figcaption>
+          </figure>
+          <figure class="case-figure">
+            <div class="image-wrapper">
+              <img src="assets/pushkin/pushkin-comments-implemented.jpeg" alt="Реализованный интерфейс научных комментариев на портале Пушкин цифровой" />
+            </div>
+            <figcaption class="caption">Реализованная версия</figcaption>
+          </figure>
+          <figure class="case-figure">
+            <div class="image-wrapper">
+              <img src="assets/pushkin/pushkin-correlates.webp" alt="Корреляты и связанные материалы на портале Пушкин цифровой" />
+            </div>
+            <figcaption class="caption">Связанные материалы вокруг произведения</figcaption>
+          </figure>
+        </section>
+
+        <section class="case-block" id="experts">
+          <h2 class="h3">Работа с экспертами</h2>
+          <p class="body">Работа с академическим сообществом сильно отличалась от привычных продуктовых проектов. Если обычно заказчик — это бизнес, для которого деньги = время, или разработчики, скупые на слова и эмоции, то здесь всё было иначе.</p>
+          <p class="body">Созвон мог начаться с обсуждения структуры страницы произведения, а через пару часов мы уже оказывались в какой-то точке биографии Александра Сергеевича. Самый длинный разговор с заказчиком за весь проект длился почти три часа.</p>
+          <p class="body">Для академиков произведение не существует отдельно от контекста — рукописей, комментариев, исторических событий, связей с другими материалами. И этим взглядом они хотели поделиться не только с исследователями, но и с более широкой аудиторией.</p>
+          <p class="body">Поэтому перед тем как принимать интерфейсные решения, приходилось сначала разбираться в логике предметной области и понимать, как сами исследователи смотрят на материал.</p>
+          <figure class="case-figure">
+            <div class="image-wrapper">
+              <img src="assets/pushkin/pushkin-process.webp" alt="Проектирование интерфейса портала Пушкин цифровой на бумаге" />
+            </div>
+            <figcaption class="caption">Проработка интерфейса на раннем этапе проектирования</figcaption>
+          </figure>
+        </section>
+
+        <section class="case-block" id="result">
+          <h2 class="h3">Результат</h2>
+          <p class="body">В результате был спроектирован UX для десктопной и мобильной версий научно-просветительского портала.</p>
+          <p class="body">В работе были проработаны:</p>
+          <ul class="body">
+            <li>17 разделов портала;</li>
+            <li>27 типов контента;</li>
+            <li>4 портрета пользователей;</li>
+            <li>библиотека компонентов для дальнейшей работы команды;</li>
+            <li>сценарии работы с произведениями, рукописями, комментариями, библиографией и просветительскими материалами.</li>
+          </ul>
+          <p class="body">Для меня этот проект стал опытом проектирования системы знаний, где интерфейс должен был одновременно сохранять академическую точность и помогать людям без специальной подготовки не потеряться в сложном материале.</p>
+          <figure class="case-figure">
+            <div class="image-wrapper">
+              <img src="assets/pushkin/pushkin-letters.webp" alt="Раздел писем на портале Пушкин цифровой" />
+            </div>
+            <figcaption class="caption">Раздел «Письма»</figcaption>
+          </figure>
+          <figure class="case-figure">
+            <div class="image-wrapper">
+              <img src="assets/pushkin/pushkin-bibliography.webp" alt="Библиография на портале Пушкин цифровой" />
+            </div>
+            <figcaption class="caption">Библиография как часть научного контекста</figcaption>
+          </figure>
+        </section>
+      </article>
+    </main>
+    <script src="./scroll.js" defer></script>
+  </body>
+</html>
