@@ -15,7 +15,7 @@ All future cases must follow this structure.
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AoS — Юлия Груздева</title>
+    <title>Корпоративная CRM — Юлия Груздева</title>
     <link rel="stylesheet" href="./styles.css" />
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
@@ -37,15 +37,14 @@ All future cases must follow this structure.
       <article class="case section section--narrow" id="aos">
         <header class="case-hero">
           <div class="case-brand">
-            <img class="case-brand__logo" src="assets/logo/mts_logo.svg" alt="" />
-            <span class="caption">МТС · AoS</span>
+            <span class="caption">Корпоративная CRM для B2B-продаж</span>
           </div>
-          <h1 class="h2">AoS: Между требованиями и интерфейсом</h1>
+          <h1 class="h2">Корпоративная CRM: между требованиями и интерфейсом</h1>
           <p class="body">Сложная корпоративная система, где интерфейс постоянно находится между требованиями, архитектурными ограничениями и реальной логикой работы пользователей.</p>
           <div class="case-meta case-meta--grid">
             <div class="case-meta__item">
               <p class="caption case-meta__label">Продукт</p>
-              <p class="body case-meta__value">Automation of Sales (AoS)</p>
+              <p class="body case-meta__value">Корпоративная CRM для B2B-продаж</p>
             </div>
             <div class="case-meta__item">
               <p class="caption case-meta__label">Роль</p>
@@ -72,7 +71,7 @@ All future cases must follow this structure.
 
         <section class="case-block">
           <h2 class="h3">Моя роль</h2>
-          <p class="body">В рамках AoS отвечаю за исследование пользовательских сценариев, проработку продуктовой логики, проектирование интерфейсов и развитие общих паттернов продукта. Работаю на стыке пользователей, аналитиков, разработки и ограничений low-code платформы ELMA.</p>
+          <p class="body">В рамках корпоративной CRM отвечаю за исследование пользовательских сценариев, проработку продуктовой логики, проектирование интерфейсов и развитие общих паттернов продукта. Работаю на стыке пользователей, аналитиков, разработки и ограничений low-code-платформы.</p>
         </section>
 
         <section class="case-block" id="context">
@@ -86,7 +85,7 @@ All future cases must follow this structure.
 
         <section class="case-block">
           <h2 class="h3">С чего пришлось начать</h2>
-          <p class="body">Довольно быстро стало понятно, что проблема не в отдельных экранах. Чтобы вообще начать системно развивать продукт, сначала пришлось создать базу для работы с интерфейсами, так как никакого UI-кита не существовало. Мне пришлось собирать практически с нуля, причём от обратного: через анализ уже реализованных компонентов, экранов и ограничений low-code платформы.</p>
+          <p class="body">Довольно быстро стало понятно, что проблема не в отдельных экранах. Чтобы вообще начать системно развивать продукт, сначала пришлось создать базу для работы с интерфейсами, так как никакого UI-кита не существовало. Мне пришлось собирать практически с нуля, причём от обратного: через анализ уже реализованных компонентов, экранов и ограничений low-code-платформы.</p>
           <p class="body">Постепенно набор разрозненных интерфейсов начал превращаться в систему. Появились повторно используемые компоненты, единые паттерны и возможность проектировать не отдельные экраны, а пользовательские сценарии целиком.</p>
           <p class="body">Но довольно быстро стало понятно, что одного UI-кита и запуска дизайн-процесса недостаточно. Основная проблема находилась раньше — на этапе формирования решений.</p>
         </section>
@@ -125,16 +124,6 @@ All future cases must follow this structure.
           <h2 class="h3">Пример 1. Параметры продуктов</h2>
           <p class="body">Для каждого продукта связи существует набор параметров, влияющих на подключение и дальнейшее исполнение заказа. С точки зрения архитектуры было логично строить единую модель параметров для всех продуктов. Это упрощало поддержку и делало систему более предсказуемой. Но во время обсуждений и тестирования стало понятно, что универсальность системы не всегда помогает пользователю. Часть настроек выглядела важной для системы, но не помогала человеку выполнить задачу.</p>
           <p class="body">В результате пришлось разделять системную и пользовательскую логику и искать баланс между архитектурной целостностью и удобством работы.</p>
-          <figure class="case-figure case-figure--scheme status-figure">
-            <div class="image-wrapper">
-              <img
-                class="architecture-image"
-                src="assets/aos/product-parameters-flow.png"
-                alt=""
-              />
-            </div>
-            <figcaption class="caption">Схема пользовательского пути и параметров продукта</figcaption>
-          </figure>
         </section>
 
         <section class="case-block">
@@ -147,77 +136,13 @@ All future cases must follow this structure.
 
           <p class="body">Во время обсуждений с командой и проверки сценариев стало понятно, что пользователю не нужно видеть всю техническую сложность процесса. Он воспринимает заказ целиком и хочет понимать только то, что влияет на его дальнейшие действия. В результате статусная модель была пересмотрена. Техническая логика системы сохранилась, но в интерфейсе остались только состояния, которые помогают человеку принять решение и понять следующий шаг.</p>
 
-<div class="status-model status-block">
-            <p class="caption status-model__title status-title">Было</p>
-            <figure class="case-figure case-figure--scheme status-figure">
-              <div class="image-wrapper">
-                <div class="status-box">
-                <p class="caption status-label">КОРЗИНА</p>
-                <div class="status-line">
-                  <span class="badge ag-small-code badge--draft">Черновик</span>
-                  <span class="status-arrow">→</span>
-                  <span class="badge ag-small-code badge--not-ready">Не готова к исполнению заказа</span>
-                  <span class="status-arrow">→</span>
-                  <span class="badge ag-small-code badge--done">Готова к исполнению заказа</span>
-                  <span class="status-arrow">→</span>
-                  <span class="badge ag-small-code badge--order">Передана в заказ</span>
-                  <span class="status-arrow">→</span>
-                  <span class="badge ag-small-code badge--archive">Архив</span>
-                </div>
-                
-                <div class="status-separator"></div>
-                <p class="caption status-label">ПРОДУКТ</p>
-                <div class="status-line">
-                  <span class="badge ag-small-code badge--draft">Черновик</span>
-                  <span class="status-arrow">→</span>
-                  <span class="badge ag-small-code badge--not-ready">Не готов</span>
-                  <span class="status-arrow">→</span>
-                  <span class="badge ag-small-code badge--done">Готов</span>
-                  <span class="status-arrow">→</span>
-                  <span class="badge ag-small-code badge--order">Передан в заказ</span>
-                  <span class="status-arrow">→</span>
-                  <span class="badge ag-small-code badge--archive">Архив</span>
-                </div>
-                </div>
-              </div>
-              <figcaption class="caption">Техническая статусная модель</figcaption>
-            </figure>
-          </div>
-
-          <div class="status-model status-block">
-            <p class="caption status-model__title status-title">Стало</p>
-            <figure class="case-figure case-figure--scheme status-figure">
-              <div class="image-wrapper">
-                <div class="status-box status-box--compact">
-                <p class="caption status-label">КОРЗИНА</p>
-                <div class="status-line">
-                  <span class="badge ag-small-code badge--not-ready">Не готово</span>
-                  <span class="status-arrow">→</span>
-                  <span class="badge ag-small-code badge--done">Готово</span>
-                  <span class="status-arrow">→</span>
-                  <span class="badge ag-small-code badge--order">Передано в заказ</span>
-                </div>
-                <div class="status-separator"></div>
-                <p class="caption status-label">ПРОДУКТЫ</p>
-                <div class="status-line">
-                  <span class="badge ag-small-code badge--draft">Черновик</span>
-                  <span class="status-arrow">→</span>
-                  <span class="badge ag-small-code badge--not-ready">Не готов</span>
-                  <span class="status-arrow">→</span>
-                  <span class="badge ag-small-code badge--done">Готов</span>
-                </div>
-                </div>
-              </div>
-              <figcaption class="caption">Пользовательская статусная модель</figcaption>
-            </figure>
-          </div>
           <figure class="case-figure case-figure--shadow">
             <div class="image-wrapper image-stack">
               <img src="assets/aos/status-interface-1.png" alt="" />
               <img src="assets/aos/status-interface-2.png" alt="" />
               <img src="assets/aos/status-interface-3.png" alt="" />
             </div>
-            <figcaption class="caption">Как это выглядит в интерфейсе ELMA</figcaption>
+            <figcaption class="caption">Как это выглядит в интерфейсе low-code-платформы</figcaption>
           </figure>
         </section>
 
@@ -244,6 +169,7 @@ All future cases must follow this structure.
           <p class="body">Например, с помощью AI удалось собрать раздел обучения полностью на компонентах существующих дизайн-систем без создания новых сущностей и с минимальным объёмом ручных доработок.</p>
           <p class="body">Для анализа рынка CRM настроила AI-процесс, который автоматически собирает информацию о релизах конкурентов, структурирует её в едином формате и формирует материалы для дальнейшего анализа команды. Это позволило значительно сократить время на подготовку исследований и обзор рынка.</p>
         </section>
+        <p class="caption">Интерфейсы и данные реконструированы для портфолио. Названия отдельных сущностей и детали реализации изменены для соблюдения конфиденциальности.</p>
       </article>
     </main>
     <script src="./scroll.js" defer></script>
