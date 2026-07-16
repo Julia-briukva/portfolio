@@ -91,6 +91,56 @@
 
   if (!caseImageWrappers.length) return;
 
+  const getImageSource = (image) => {
+    if (!image) return "";
+
+    return (image.currentSrc || image.src || image.getAttribute("src") || "").split(/[?#]/)[0];
+  };
+
+  const getSequenceKey = (image) => {
+    const source = getImageSource(image);
+    const fileName = source.split("/").pop();
+    const match = fileName && fileName.match(/^(.+?)[-_]?(\d+)(\.[^.]+)$/);
+
+    if (!match) return null;
+
+    const directory = source.slice(0, source.length - fileName.length);
+    return {
+      key: `${directory}${match[1]}${match[3]}`,
+      order: Number(match[2]),
+    };
+  };
+
+  const imageItems = caseImageWrappers
+    .map((wrapper) => {
+      const image = wrapper.querySelector("img");
+      const sequence = getSequenceKey(image);
+
+      return { wrapper, image, sequence };
+    })
+    .filter((item) => item.image);
+
+  const sequenceMap = new Map();
+
+  imageItems.forEach((item) => {
+    if (!item.sequence) return;
+
+    if (!sequenceMap.has(item.sequence.key)) sequenceMap.set(item.sequence.key, []);
+    sequenceMap.get(item.sequence.key).push(item);
+  });
+
+  sequenceMap.forEach((items, key) => {
+    const orderedItems = items
+      .sort((a, b) => a.sequence.order - b.sequence.order)
+      .filter((item, index, list) => index === 0 || item.sequence.order !== list[index - 1].sequence.order);
+
+    if (orderedItems.length > 1) {
+      sequenceMap.set(key, orderedItems);
+    } else {
+      sequenceMap.delete(key);
+    }
+  });
+
   const lightbox = document.createElement("div");
   lightbox.className = "lightbox";
   lightbox.hidden = true;
@@ -116,6 +166,8 @@
   document.body.append(lightbox);
 
   let activeTrigger = null;
+  let activeGallery = null;
+  let activeGalleryIndex = 0;
 
   const clearContent = () => {
     [...content.children].forEach((child) => {
@@ -130,19 +182,72 @@
 
     if (activeTrigger) activeTrigger.focus();
     activeTrigger = null;
+    activeGallery = null;
+    activeGalleryIndex = 0;
+  };
+
+  const renderLightboxImage = (image) => {
+    clearContent();
+
+    const enlargedImage = document.createElement("img");
+    enlargedImage.className = "lightbox__image";
+    enlargedImage.src = image.currentSrc || image.src;
+    enlargedImage.alt = image.alt || "";
+    content.prepend(enlargedImage);
+  };
+
+  const showGalleryImage = (index) => {
+    if (!activeGallery) return;
+
+    activeGalleryIndex = (index + activeGallery.length) % activeGallery.length;
+    const currentItem = activeGallery[activeGalleryIndex];
+
+    clearContent();
+
+    const enlargedImage = document.createElement("img");
+    enlargedImage.className = "lightbox__image";
+    enlargedImage.src = currentItem.image.currentSrc || currentItem.image.src;
+    enlargedImage.alt = currentItem.image.alt || "";
+
+    const previousButton = document.createElement("button");
+    previousButton.className = "lightbox__nav lightbox__nav--prev";
+    previousButton.type = "button";
+    previousButton.setAttribute("aria-label", "Предыдущий экран");
+    previousButton.textContent = "←";
+
+    const nextButton = document.createElement("button");
+    nextButton.className = "lightbox__nav lightbox__nav--next";
+    nextButton.type = "button";
+    nextButton.setAttribute("aria-label", "Следующий экран");
+    nextButton.textContent = "→";
+
+    const counter = document.createElement("p");
+    counter.className = "caption lightbox__counter";
+    counter.textContent = `${activeGalleryIndex + 1} / ${activeGallery.length}`;
+
+    previousButton.addEventListener("click", () => showGalleryImage(activeGalleryIndex - 1));
+    nextButton.addEventListener("click", () => showGalleryImage(activeGalleryIndex + 1));
+
+    content.prepend(enlargedImage, previousButton, nextButton, counter);
   };
 
   const openLightbox = (trigger, image) => {
     activeTrigger = trigger;
-    clearContent();
+    activeGallery = null;
+    activeGalleryIndex = 0;
 
     if (image) {
-      const enlargedImage = document.createElement("img");
-      enlargedImage.className = "lightbox__image";
-      enlargedImage.src = image.currentSrc || image.src;
-      enlargedImage.alt = image.alt || "";
-      content.prepend(enlargedImage);
+      const imageItem = imageItems.find((item) => item.image === image);
+      const gallery = imageItem?.sequence ? sequenceMap.get(imageItem.sequence.key) : null;
+
+      if (gallery) {
+        activeGallery = gallery;
+        showGalleryImage(gallery.findIndex((item) => item.image === image));
+      } else {
+        renderLightboxImage(image);
+      }
     } else {
+      clearContent();
       const scheme = trigger.cloneNode(true);
       scheme.classList.add("lightbox__scheme");
       scheme.removeAttribute("tabindex");
@@ -178,5 +283,13 @@
   closeButton.addEventListener("click", closeLightbox);
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && !lightbox.hidden) closeLightbox();
+    if (event.key === "ArrowLeft" && activeGallery && !lightbox.hidden) {
+      event.preventDefault();
+      showGalleryImage(activeGalleryIndex - 1);
+    }
+    if (event.key === "ArrowRight" && activeGallery && !lightbox.hidden) {
+      event.preventDefault();
+      showGalleryImage(activeGalleryIndex + 1);
+    }
   });
 })();
